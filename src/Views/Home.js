@@ -52,8 +52,8 @@ class Home extends React.Component {
             <div class="view-container">
 
                 <Section>
-                    <h1>Learning plans</h1>
                     <div class="o-container">
+                        <h1>Learning plans</h1>
                         <div class="pure-g">
                             {this.createPlanCards()}
                         </div>
