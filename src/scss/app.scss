@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+
 @import '~purecss-sass/vendor/assets/stylesheets/purecss/base';
 @import '~purecss-sass/vendor/assets/stylesheets/purecss/grids';
 @import '~purecss-sass/vendor/assets/stylesheets/purecss/grids-responsive';
@@ -8,9 +10,8 @@
 @import 'elements';
 @import 'forms';
 @import 'objects';
+@import 'components';
 @import 'utilities';
 @import 'overrides';
 @import 'components';
-
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
 
