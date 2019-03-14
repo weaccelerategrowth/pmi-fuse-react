@@ -72,7 +72,11 @@ class Home extends React.Component {
 
                 <Section>
                     <h1>Learning plans</h1>
-                    {this.createPlanCards()} 
+                    <div class="o-container">
+                        <div class="pure-g">
+                            {this.createPlanCards()}
+                        </div>
+                    </div>
                 </Section>
 
 
