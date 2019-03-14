@@ -15,8 +15,10 @@ class Home extends React.Component {
     render() {
         return (
             <Section>
-                <h1>Learning plans</h1>
-                {this.createPlanCards()}             
+                <h2>Learning plans</h2>
+                <Container>
+                {this.createPlanCards()}
+                </Container>
             </Section>
         )
     }
