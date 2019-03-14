@@ -13,7 +13,7 @@ class Community extends Component {
                     <img src={this.props.item.image_url} className="img-fluid" />
                 </div>
                 <div className="o-fancy-box__content c-community__content">
-                    <h3 className="c-community__name">{this.props.item.name}</h3>
+                    <h3 className="o-fancy-box__title c-community__name">{this.props.item.name}</h3>
                 </div>
             </div>
         )

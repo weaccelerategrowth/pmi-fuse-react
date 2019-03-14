@@ -8,12 +8,12 @@ class Event extends Component {
 
     render() {
         return (
-            <div className="c-community">
-                <div class="o-image-overflow">
+            <div className="o-fancy-box c-event">
+                <div class="o-fancy-box__image o-image-overflow">
                     <img src={this.props.item.image_url} className="img-fluid" />
                 </div>
-                <div class="c-community__content">
-                    <h3 class="c-community__name">{this.props.item.event_name}</h3>
+                <div class="o-fancy-box__content c-event__content">
+                    <h3 class="o-fancy-box__title c-event__name">{this.props.item.event_name}</h3>
                 </div>
             </div>
         )

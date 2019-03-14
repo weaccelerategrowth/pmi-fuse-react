@@ -7,6 +7,8 @@ import * as serviceWorker from './serviceWorker'
 // View imports
 import Home from './Views/Home'
 
+window.authToken = document.querySelector('meta[name="auth-token"]').content
+
 const routing = (
     <Router>
         <div>
