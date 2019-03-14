@@ -1,0 +1,168 @@
+body {
+
+    line-height: 1.375;
+    font-size: 16px;
+    color: #282828;
+    background-color: #fafafa;
+    font-weight: normal;
+
+}
+
+body, .pure-g [class*="pure-u"], [class*="pure-u"] {
+    font-family: 'Nunito', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-weight: 300;
+}
+
+
+.pure-g {
+
+    margin-left: -1rem;
+    margin-right: -1rem;
+
+    > [class*="pure-u-"] {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::selection {
+    background: #172D48;
+    color: white;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: inherit;
+    outline: none;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    color: #333;
+
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 300;
+    @include mq('md', 'min') {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+}
+
+h2, .h2 {
+    font-size: 26px;
+    line-height: 45px;
+    font-weight: 300;
+    @include mq('md', 'min') {
+        font-size: 46px;
+        line-height: 1.2;
+    }
+}
+
+h3, .h3 {
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.view-container {
+    overflow-x: hidden;
+}
+
+
+.o-container {
+
+    width: 100%;
+    position: relative;
+
+    padding-right: 2rem;
+    padding-left: 2rem;
+
+    margin-right: auto;
+    margin-left: auto;
+
+
+    @include mq('md', 'min') {
+        max-width: 750px;
+
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+    }
+
+    @include mq('lg', 'min') {
+        max-width: 870px;
+    }
+
+    @include mq('xl', 'min')  {
+        max-width: 1024px;
+    }
+
+    @media print {
+        max-width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0
+    }
+
+    &--med {
+
+        @include mq('lg', 'min') {
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+
+    &--large {
+
+        @include mq('md', 'min') {
+            max-width: 97%;
+        }
+
+        @include mq('xl', 'min') {
+            //max-width: 1300px;
+        }
+    }
+
+}
+
+.app {
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @media print {
+        padding-top: 0;
+    }
+
+}
+
+.o-section {
+    
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: relative;
+
+}
+

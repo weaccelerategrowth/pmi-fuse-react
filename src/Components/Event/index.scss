@@ -1,0 +1,31 @@
+.c-communityy {
+    box-shadow: 0 0 3px 1px #ececec;
+    border-radius: 2px;
+    text-align: center;
+    min-height: 200px;
+    background-color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__name {
+        font-size: 1.5rem;
+        font-weight: 200;
+        color: grey;
+    }
+
+    &__content {
+        padding: 1.5rem;
+        font-size: 1.1rem;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
