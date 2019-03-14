@@ -10,12 +10,13 @@
     line-height: 1.5;
     outline: none;
     margin: 0px;
-    padding: 12px 30px 12px 30px;
+    box-shadow: 0 0 5px #ddd;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
     text-align: center;
     text-transform: capitalize;
     transition: 0.3s;
     border-radius: 5px;
-    font-size: 1rem;
     letter-spacing: 0.5px;
     text-decoration: none;
     background-color: transparent;
@@ -54,29 +55,39 @@
 .o-fancy-box {
     display: flex;
     margin-bottom: 2rem;
-    box-shadow: 0 0 3px 1px #ececec;
-    border-radius: 2px;
+    box-shadow: 1px 1px 7px #ddd;
+    border-radius: 5px;
     background-color: white;
     display: flex;
     min-height: 50px;
+    position: relative;
+    border-radius: 5px;
 
     img {
         object-fit: cover;
         width: 100%;
         height: 100%;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
     }
 
     &__title {
         font-size: 1rem;
         font-weight: 500;
+        margin-bottom: .2rem;
     }
 
     &__image {
-        width: 20%;
+        width: 25%;
     }
 
     &__content {
         flex: 1;
         padding: 1rem;
+    }
+
+    &__meta {
+        color: #ccc;
+        font-size: 0.7rem;
     }
 }

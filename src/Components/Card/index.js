@@ -8,7 +8,7 @@ class Card extends React.Component {
                 <p class="c-card__status">In progress</p>
                 <h2 class="c-card__title">Our Products, Our Science</h2>
                 <div class="c-card__image">
-                    <img src=""></img>
+                    <img src="" alt=""></img>
                     <div class="c-card__progress"></div>
                 </div>
                 <div class="c-card__button">

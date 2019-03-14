@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Route, NavLink, BrowserRouter as Router, Switch } from 'react-router-dom'
 import './scss/app.scss';
-import * as serviceWorker from './serviceWorker'
+//import * as serviceWorker from './serviceWorker'
 
 // View imports
 import Home from './Views/Home'
