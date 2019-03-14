@@ -9,7 +9,7 @@ import Card from '../Components/Card'
 
 import Community from '../Components/Community'
 import Event from '../Components/Event'
-import Survey from '../Components/Survey'
+import Topic from '../Components/Topic'
 
 class Home extends React.Component {
 
@@ -20,13 +20,13 @@ class Home extends React.Component {
             me: {},
             communities: [],
             events: [],
-            surveys: [],
+            topics: [],
         }
 
         this.fetchMe()
         this.fetchCommunities()
         this.fetchEvents()
-        this.fetchSurveys()
+        this.fetchTopics()
     }
 
     createPlanCards = () => {
@@ -59,9 +59,9 @@ class Home extends React.Component {
         this.setState({ events: data.data.event_occurrences })  
     }
 
-    async fetchSurveys() {
-        let data = await Axios.get( this.buildUrl( '/surveys', { per_page: 3, all: false } ) )
-        this.setState({ surveys: data.data.surveys })  
+    async fetchTopics() {
+        let data = await Axios.get( this.buildUrl( '/topics', { per_page: 3, all: false } ) )
+        this.setState({ topics: data.data.topics.slice(0, 3) })  
     }
 
     render() {
@@ -85,7 +85,7 @@ class Home extends React.Component {
                 <Section>
                     <div class="o-container">
                         <div class="pure-g c-listing-grid">
-                            <div class="pure-u-1 pure-u-md-1-3">
+                            <div class="pure-u-1 pure-u-lg-1-3">
                                 <h2>Your communities</h2>
                                 <div class="c-listing-grid__items">
                                     {this.state.communities.map((item) =>
@@ -94,7 +94,7 @@ class Home extends React.Component {
                                 </div>
                                 <a href="/communities">View all communities</a>
                             </div>
-                            <div class="pure-u-1 pure-u-md-1-3">
+                            <div class="pure-u-1 pure-u-lg-1-3">
                                 <h2>Your events</h2>
                                 <div class="c-listing-grid__items">
                                     {this.state.events.map((item) =>
@@ -103,11 +103,11 @@ class Home extends React.Component {
                                 </div>
                                 <a href="/events">View all events</a>
                             </div>
-                            <div class="pure-u-1 pure-u-md-1-3">
-                                <h2>Your surveys</h2>
+                            <div class="pure-u-1 pure-u-lg-1-3">
+                                <h2>Your topics</h2>
                                 <div class="c-listing-grid__items">
-                                    {this.state.surveys.map((item) =>
-                                        <Survey key={item.id} item={item}></Survey>
+                                    {this.state.topics.map((item) =>
+                                        <Topic key={item.id} item={item}></Topic>
                                     )}
                                 </div>
                             </div>

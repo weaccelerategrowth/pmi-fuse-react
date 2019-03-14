@@ -1,3 +1,15 @@
 .u-text-center {
     text-align: center;
 }
+
+.u-btn-primary {
+    color: #ff3084;
+    background: white;
+}
+
+.pos-br-offset {
+    position: absolute;
+    right: 1rem;
+    bottom: 0px;
+    transform: translateY(50%);
+}
