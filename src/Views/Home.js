@@ -66,15 +66,15 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div class="view-container">
+            <div className="view-container">
 
                 <SiteHeader me={this.state.me} />
 
                 <Section>
-                    <div class="o-container">
+                    <div className="o-container">
                         <h1>Learning plans</h1>
-                        <div class="pure-g">
-                            <div class="pure-u-1">
+                        <div className="pure-g">
+                            <div className="pure-u-1">
                                 {this.createPlanCards()}
                             </div>
                         </div>
@@ -83,29 +83,29 @@ class Home extends React.Component {
 
 
                 <Section>
-                    <div class="o-container">
-                        <div class="pure-g c-listing-grid">
-                            <div class="pure-u-1 pure-u-lg-1-3">
+                    <div className="o-container">
+                        <div className="pure-g c-listing-grid">
+                            <div className="pure-u-1 pure-u-lg-1-3">
                                 <h2>Your communities</h2>
-                                <div class="c-listing-grid__items">
+                                <div className="c-listing-grid__items">
                                     {this.state.communities.map((item) =>
                                         <Community key={item.id} item={item}/>
                                     )}
                                 </div>
                                 <a href="/communities">View all communities</a>
                             </div>
-                            <div class="pure-u-1 pure-u-lg-1-3">
+                            <div className="pure-u-1 pure-u-lg-1-3">
                                 <h2>Your events</h2>
-                                <div class="c-listing-grid__items">
+                                <div className="c-listing-grid__items">
                                     {this.state.events.map((item) =>
                                         <Event key={item.id} item={item}></Event>
                                     )}
                                 </div>
                                 <a href="/events">View all events</a>
                             </div>
-                            <div class="pure-u-1 pure-u-lg-1-3">
+                            <div className="pure-u-1 pure-u-lg-1-3">
                                 <h2>Your topics</h2>
-                                <div class="c-listing-grid__items">
+                                <div className="c-listing-grid__items">
                                     {this.state.topics.map((item) =>
                                         <Topic key={item.id} item={item}></Topic>
                                     )}

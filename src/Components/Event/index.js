@@ -16,7 +16,7 @@ class Event extends Component {
                 </div>
                 <div className="o-fancy-box__content c-event__content">
                     <h3 className="o-fancy-box__title c-event__name">{this.props.item.event_name}</h3>
-                    <span class="o-fancy-box__meta">{this.props.item.starts_at_date}</span>
+                    <span className="o-fancy-box__meta">{this.props.item.starts_at_date}</span>
                 </div>
 
                 <a href={this.eventUrl()} className="o-btn u-btn-primary pos-br-offset">Visit event</a>
