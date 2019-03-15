@@ -21,21 +21,14 @@ class Home extends React.Component {
             communities: [],
             events: [],
             topics: [],
+            plans: [],
         }
 
         this.fetchMe()
         this.fetchCommunities()
         this.fetchEvents()
         this.fetchTopics()
-    }
-
-    createPlanCards = () => {
-    
-        let planCards = []
-        for (let i=0; i < 4; i++) {
-            planCards.push(<Card key={i}></Card>)
-        } 
-        return planCards
+        this.fetchPlans()
     }
 
     buildUrl( path, params ) {
@@ -64,6 +57,11 @@ class Home extends React.Component {
         this.setState({ topics: data.data.topics.slice(0, 3) })  
     }
 
+    async fetchPlans() {
+        let data = await Axios.get( this.buildUrl( '/learning-plans', { per_page: 4, all: false } ) )
+        this.setState({ plans: data.data.learning_plans }) 
+    }
+
     render() {
         return (
             <div class="view-container">
@@ -75,7 +73,9 @@ class Home extends React.Component {
                         <h1>Learning plans</h1>
                         <div class="pure-g">
                             <div class="pure-u-1">
-                                {this.createPlanCards()}
+                                {this.state.plans.map((item) => 
+                                    <Card key={item.id} item={item}/>
+                                )}
                             </div>
                         </div>
                     </div>

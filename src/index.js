@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Route, NavLink, BrowserRouter as Router, Switch } from 'react-router-dom'
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import './scss/app.scss';
 //import * as serviceWorker from './serviceWorker'
 
@@ -12,13 +12,6 @@ window.authToken = document.querySelector('meta[name="auth-token"]').content
 const routing = (
     <Router>
         <div>
-            <ul>
-                <li>    
-                    <NavLink exact activeClassName="active" to="/">
-                        Home
-                    </NavLink>
-                </li>
-            </ul>
             <Switch>
                 <Route exact path="/" component={Home} />
             </Switch>
