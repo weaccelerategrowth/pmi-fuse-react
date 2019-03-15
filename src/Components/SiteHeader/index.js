@@ -23,7 +23,7 @@ class SiteHeader extends Component {
                         </div>
                     </nav>
 
-                    <h1 className="c-site-header__welcome">Welcome back, {this.props.me.name}</h1>
+                    <h1 className="c-site-header__welcome step-1 step-6">Welcome back, {this.props.me.name}</h1>
                 </div>
             </header>
         )

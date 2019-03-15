@@ -1,5 +1,10 @@
 import React from 'react'
 import Axios from 'axios'
+import introJs from 'intro.js'
+import 'intro.js/introjs.css';
+import 'intro.js/themes/introjs-modern.css';
+
+import Joyride from 'react-joyride';
 
 import SiteHeader from '../Components/SiteHeader'
 import SiteFooter from '../Components/SiteFooter'
@@ -22,6 +27,49 @@ class Home extends React.Component {
             events: [],
             topics: [],
             plans: [],
+            steps: [
+                {
+                  target: '.step-1',
+                  content: 'Welcome to your new Fuse home. Follow this tour to learn about the new layout.',
+                  placement: 'bottom',
+                  placementBeacon: 'bottom',
+                },
+                {
+                  target: '.step-2',
+                  content: 'These are your learning plans. Carry on from where you left off or start a new plan.',
+                  disableScrolling: 'false',
+                  placement: 'bottom',
+                  placementBeacon: 'bottom',
+                },
+                {
+                    target: '.step-3',
+                    content: 'Your communities are displayed here. Click one to go to the communities\'s home.',
+                    disableScrolling: 'false',
+                    placement: 'bottom',
+                    placementBeacon: 'bottom',
+                },
+                {
+                    target: '.step-4',
+                    content: 'These are your upcoming events. Events are organised by the communities you are part of. Click a card to view more details.',
+                    disableScrolling: 'false',
+                    placement: 'bottom',
+                    placementBeacon: 'bottom',
+                },
+                {
+                    target: '.step-5',
+                    content: 'These are some suggested topics, we\'ve picked ones that we think you might be interested in.',
+                    disableScrolling: 'false',
+                    placement: 'bottom',
+                    placementBeacon: 'bottom',
+                },
+                {
+                    target: '.step-6',
+                    content: 'We hope you enjoy the new Fuse!',
+                    disableScrolling: 'false',
+                    placement: 'bottom',
+                    placementBeacon: 'bottom',
+                },
+            ]
         }
 
         this.fetchMe()
@@ -63,25 +111,40 @@ class Home extends React.Component {
     }
 
     render() {
-        return (
-            <div className="view-container">
 
-                <SiteHeader me={this.state.me} />
+        const { steps } = this.state;
+
+        return (
+            
+            <div className="view-container" >
+                <Joyride steps={steps}
+                        styles={{
+                        options: {
+                        arrowColor: '#FF1474',
+                        backgroundColor: '#FF1474',
+                        overlayColor: 'rgba(0, 0, 0, 0.2)',
+                        primaryColor: '#FF1474',
+                        textColor: '#fff',
+                        width: 300,
+                        zIndex: 1000,
+                        }
+                        
+                    }}
+                    showProgress={true}
+                    continuous={true}
+                    showSkipButton={true}
+                    locale {...{back: 'Back', close: 'Close', last: 'Finish', next: 'Next', skip: 'Skip'}}
+                />
+                <SiteHeader me={this.state.me}/>
 
                 <Section>
-                    <div className="o-container">
-                        <h1>Learning plans</h1>
-<<<<<<< HEAD
+                    <div className="o-container step-2">
+                        <h1 >Learning plans</h1>
                         <div class="pure-g">
                             <div class="pure-u-1">
                                 {this.state.plans.map((item) => 
                                     <Card key={item.id} item={item}/>
                                 )}
-=======
-                        <div className="pure-g">
-                            <div className="pure-u-1">
-                                {this.createPlanCards()}
->>>>>>> bd455fa2f2644ee8b80ccdf780ad1853f50e055c
                             </div>
                         </div>
                     </div>
@@ -91,7 +154,7 @@ class Home extends React.Component {
                 <Section>
                     <div className="o-container">
                         <div className="pure-g c-listing-grid">
-                            <div className="pure-u-1 pure-u-lg-1-3">
+                            <div className="pure-u-1 pure-u-lg-1-3 step-3">
                                 <h2>Your communities</h2>
                                 <div className="c-listing-grid__items">
                                     {this.state.communities.map((item) =>
@@ -100,7 +163,7 @@ class Home extends React.Component {
                                 </div>
                                 <a href="/communities">View all communities</a>
                             </div>
-                            <div className="pure-u-1 pure-u-lg-1-3">
+                            <div className="pure-u-1 pure-u-lg-1-3 step-4">
                                 <h2>Your events</h2>
                                 <div className="c-listing-grid__items">
                                     {this.state.events.map((item) =>
@@ -109,7 +172,7 @@ class Home extends React.Component {
                                 </div>
                                 <a href="/events">View all events</a>
                             </div>
-                            <div className="pure-u-1 pure-u-lg-1-3">
+                            <div className="pure-u-1 pure-u-lg-1-3 step-5">
                                 <h2>Your topics</h2>
                                 <div className="c-listing-grid__items">
                                     {this.state.topics.map((item) =>
