@@ -1,11 +1,11 @@
 @import '../../scss/variables';
 
-
 .c-site-header {
 
     min-height: 300px;
     padding-bottom: 4rem;
-    background-image: linear-gradient($color-pink, $color-orange), url('../../images/pmi-logo-large@2x.png');
+    //background-image: url('../../images/pmi-logo-large@2x.png');
+    //background-image: linear-gradient($color-pink, $color-orange), url($cdn + '/static/media/pmi-logo-large@2x.png');
     background-repeat: repeat;
     background-size: cover;
 

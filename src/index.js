@@ -7,7 +7,8 @@ import './scss/app.scss';
 // View imports
 import Home from './Views/Home'
 
-window.authToken = document.querySelector('meta[name="auth-token"]').content
+window.authToken = document.querySelector('meta[name="auth-token"]').content;
+window.cdnUrl = 'https://storage.googleapis.com/react-pmi-fuse';
 
 ReactDOM.render(<Home/>, document.getElementById('root'))
 
