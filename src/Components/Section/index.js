@@ -4,7 +4,7 @@ import './index.css'
 class Section extends React.Component {
     render() {
         return (
-            <div class="o-section">
+            <div className="o-section">
                 {this.props.children}
             </div>
         )

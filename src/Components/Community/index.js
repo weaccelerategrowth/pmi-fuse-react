@@ -10,7 +10,7 @@ class Community extends Component {
                 </div>
                 <div className="o-fancy-box__content c-community__content">
                     <h3 className="o-fancy-box__title c-community__name">{this.props.item.name}</h3>
-                    <span class="o-fancy-box__meta c-community__members-count">{this.props.item.members_count} members</span>
+                    <span className="o-fancy-box__meta c-community__members-count">{this.props.item.members_count} members</span>
                 </div>
             </div>
         )
