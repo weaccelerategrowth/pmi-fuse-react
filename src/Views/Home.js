@@ -106,7 +106,7 @@ class Home extends React.Component {
     }
 
     async fetchPlans() {
-        let data = await Axios.get( this.buildUrl( '/learning-plans', { per_page: 4, all: false } ) )
+        let data = await Axios.get( this.buildUrl( '/learning-plans/my' , { per_page: 4 } ) )
         this.setState({ plans: data.data.learning_plans }) 
     }
 
@@ -139,7 +139,8 @@ class Home extends React.Component {
 
                 <Section>
                     <div className="o-container step-2">
-                        <h1 >Learning plans</h1>
+                        <h2 >Your learning plans</h2>
+                        <br></br>
                         <div class="pure-g">
                             <div class="pure-u-1">
                                 {this.state.plans.map((item) => 
@@ -147,6 +148,9 @@ class Home extends React.Component {
                                 )}
                             </div>
                         </div>
+                        <br></br>
+                        <br></br>
+                        <a href="/learning-plans" className="u-small-link">View all learning plans</a>
                     </div>
                 </Section>
 
@@ -156,29 +160,33 @@ class Home extends React.Component {
                         <div className="pure-g c-listing-grid">
                             <div className="pure-u-1 pure-u-lg-1-3 step-3">
                                 <h2>Your communities</h2>
+                                <br></br>
                                 <div className="c-listing-grid__items">
                                     {this.state.communities.map((item) =>
                                         <Community key={item.id} item={item}/>
                                     )}
                                 </div>
-                                <a href="/communities">View all communities</a>
+                                <a href="/communities" className="u-small-link">View all communities</a>
                             </div>
                             <div className="pure-u-1 pure-u-lg-1-3 step-4">
                                 <h2>Your events</h2>
+                                <br></br>
                                 <div className="c-listing-grid__items">
                                     {this.state.events.map((item) =>
                                         <Event key={item.id} item={item}></Event>
                                     )}
                                 </div>
-                                <a href="/events">View all events</a>
+                                <a href="/events" className="u-small-link">View all events</a>
                             </div>
                             <div className="pure-u-1 pure-u-lg-1-3 step-5">
                                 <h2>Your topics</h2>
+                                <br></br>
                                 <div className="c-listing-grid__items">
                                     {this.state.topics.map((item) =>
                                         <Topic key={item.id} item={item}></Topic>
                                     )}
                                 </div>
+                                <a href="/topics" className="u-small-link">View all topics</a>
                             </div>
                         </div>
                     </div>

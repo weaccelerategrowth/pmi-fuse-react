@@ -16,11 +16,11 @@ class SiteHeader extends Component {
             <header className="c-site-header" style={styles}>
                 <div className="o-container">
                     <nav className="c-site-header__nav">
-                        <img src={window.cdnUrl + logo} alt="logo" className="c-site-header__logo"></img>
+                        {/* <img src={window.cdnUrl + logo} alt="logo" className="c-site-header__logo"></img>
                         <div className="c-site-header__meta">
                             Logged in as {this.props.me.name} {this.props.me.family_name}
                             <a className="c-site-header__logout" href="/users/sign_out">Sign out</a>
-                        </div>
+                        </div> */}
                     </nav>
 
                     <h1 className="c-site-header__welcome step-1 step-6">Welcome back, {this.props.me.name}</h1>
