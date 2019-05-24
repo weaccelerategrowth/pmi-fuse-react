@@ -1,0 +1,16 @@
+{
+  "main.css": "/pmi-fuse-react/static/css/main.css",
+  "main.js": "/pmi-fuse-react/static/js/main.min.js",
+  "main.js.map": "/pmi-fuse-react/static/js/main.min.js.map",
+  "static/css/1.a7b5d079.chunk.css": "/pmi-fuse-react/static/css/1.a7b5d079.chunk.css",
+  "static/js/vendor.min.js": "/pmi-fuse-react/static/js/vendor.min.js",
+  "static/js/vendor.min.js.map": "/pmi-fuse-react/static/js/vendor.min.js.map",
+  "index.html": "/pmi-fuse-react/index.html",
+  "precache-manifest.e6c0444bc1262ce1c8cabb5229735ccb.js": "/pmi-fuse-react/precache-manifest.e6c0444bc1262ce1c8cabb5229735ccb.js",
+  "service-worker.js": "/pmi-fuse-react/service-worker.js",
+  "static/css/1.a7b5d079.chunk.css.map": "/pmi-fuse-react/static/css/1.a7b5d079.chunk.css.map",
+  "static/css/main.css.map": "/pmi-fuse-react/static/css/main.css.map",
+  "static/media/fuse-pmi-logo@2x.png": "/pmi-fuse-react/static/media/fuse-pmi-logo@2x.ed88977f.png",
+  "static/media/pmi-logo-large@2x.png": "/pmi-fuse-react/static/media/pmi-logo-large@2x.53b26204.png",
+  "static/media/pmi-logo@2x.png": "/pmi-fuse-react/static/media/pmi-logo@2x.c67069ee.png"
+}
