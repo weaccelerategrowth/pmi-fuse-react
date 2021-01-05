@@ -81,7 +81,7 @@
     "@storybook/addon-links": "^5.0.0",
     "@storybook/addons": "^5.0.0",
     "@storybook/react": "^5.0.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-loader": "^8.0.5",
     "node-sass": "^4.11.0",
     "purecss-sass": "^1.0.0"
